@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lvb-ka-3LW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -97,6 +97,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="XcH-dW-Zdz">
+            <objects>
+                <viewController id="Lvb-ka-3LW" customClass="LoginVC" customModule="fortune_rpg" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZtA-dK-sas">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1GV-UO-1GB">
+                                <rect key="frame" x="16" y="52" width="343" height="210"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOG IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smo-ui-O7K">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="42"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                        <color key="textColor" red="0.96078431372549022" green="0.55294117647058827" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="user name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SQS-bb-Fw3" customClass="CustomTextField" customModule="fortune_rpg" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="62" width="343" height="36"/>
+                                        <color key="backgroundColor" red="0.24313725490196078" green="0.25882352941176467" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.90196078431372551" green="0.96470588235294119" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBg-v0-2bS" customClass="CustomTextField" customModule="fortune_rpg" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="118" width="343" height="36"/>
+                                        <color key="backgroundColor" red="0.24313725489999999" green="0.25882352939999997" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.90196078430000004" green="0.96470588239999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DkK-lZ-97H" customClass="CustomTextField" customModule="fortune_rpg" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="174" width="343" height="36"/>
+                                        <color key="backgroundColor" red="0.24313725489999999" green="0.25882352939999997" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.90196078430000004" green="0.96470588239999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pc-lh-9Fb">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJf-Na-olo">
+                                        <rect key="frame" x="8" y="8" width="359" height="54"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <state key="normal" title="LOG IN or REGISTER">
+                                            <color key="titleColor" red="0.23921568627450979" green="0.47058823529411764" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButton:" destination="Lvb-ka-3LW" eventType="touchUpInside" id="bni-WE-NLQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.090196078431372548" green="0.17254901960784313" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="RJf-Na-olo" firstAttribute="top" secondItem="7pc-lh-9Fb" secondAttribute="top" constant="8" id="ExS-ar-RK1"/>
+                                    <constraint firstAttribute="bottom" secondItem="RJf-Na-olo" secondAttribute="bottom" constant="8" id="STZ-lT-Kon"/>
+                                    <constraint firstAttribute="trailing" secondItem="RJf-Na-olo" secondAttribute="trailing" constant="8" id="ZLU-5c-go1"/>
+                                    <constraint firstItem="RJf-Na-olo" firstAttribute="leading" secondItem="7pc-lh-9Fb" secondAttribute="leading" constant="8" id="bLf-KP-Z65"/>
+                                    <constraint firstAttribute="height" constant="70" id="lPW-T9-qd7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.10980392156862745" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1GV-UO-1GB" firstAttribute="leading" secondItem="oLL-gN-N5m" secondAttribute="leading" constant="16" id="3ao-8J-lnx"/>
+                            <constraint firstItem="7pc-lh-9Fb" firstAttribute="bottom" secondItem="oLL-gN-N5m" secondAttribute="bottom" id="4Cy-BP-Ec4"/>
+                            <constraint firstItem="7pc-lh-9Fb" firstAttribute="trailing" secondItem="oLL-gN-N5m" secondAttribute="trailing" id="Cqm-Qx-rc6"/>
+                            <constraint firstItem="oLL-gN-N5m" firstAttribute="trailing" secondItem="1GV-UO-1GB" secondAttribute="trailing" constant="16" id="RmL-fy-goM"/>
+                            <constraint firstItem="1GV-UO-1GB" firstAttribute="top" secondItem="oLL-gN-N5m" secondAttribute="top" constant="32" id="hma-ve-JJl"/>
+                            <constraint firstItem="7pc-lh-9Fb" firstAttribute="leading" secondItem="oLL-gN-N5m" secondAttribute="leading" id="ng6-I3-epC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oLL-gN-N5m"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTxtField" destination="zBg-v0-2bS" id="pJh-OP-1al"/>
+                        <outlet property="loginView" destination="7pc-lh-9Fb" id="i4F-dV-w62"/>
+                        <outlet property="passwordTxtField" destination="DkK-lZ-97H" id="lPg-7U-d0g"/>
+                        <outlet property="usernameTxtField" destination="SQS-bb-Fw3" id="zPx-t6-4Vw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p9m-oh-R8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-535.20000000000005" y="-738.08095952023996"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

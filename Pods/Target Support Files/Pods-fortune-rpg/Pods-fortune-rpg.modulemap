@@ -1,0 +1,6 @@
+framework module Pods_fortune_rpg {
+  umbrella header "Pods-fortune-rpg-umbrella.h"
+
+  export *
+  module * { export * }
+}

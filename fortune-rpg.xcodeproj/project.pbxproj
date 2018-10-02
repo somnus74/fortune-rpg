@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E29EF14D8971C2AFB123BE0 /* Pods_fortune_rpg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58189E7E5F43A5AAF3FD4DFB /* Pods_fortune_rpg.framework */; };
 		D4A63CE4216375D500B8F5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A63CE3216375D500B8F5F4 /* AppDelegate.swift */; };
 		D4A63CE6216375D500B8F5F4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A63CE5216375D500B8F5F4 /* FirstViewController.swift */; };
 		D4A63CE8216375D500B8F5F4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A63CE7216375D500B8F5F4 /* SecondViewController.swift */; };
@@ -14,9 +15,18 @@
 		D4A63CED216375D600B8F5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4A63CEC216375D600B8F5F4 /* Assets.xcassets */; };
 		D4A63CF0216375D600B8F5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A63CEE216375D600B8F5F4 /* LaunchScreen.storyboard */; };
 		D4A63CFC216379CF00B8F5F4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A63CFB216379CF00B8F5F4 /* DataService.swift */; };
+		D4A63CFE216383D900B8F5F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4A63CFD216383D900B8F5F4 /* GoogleService-Info.plist */; };
+		D4B39CA8216399AF004EB37B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B39CA7216399AF004EB37B /* AuthService.swift */; };
+		D4B39CAA2163A773004EB37B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B39CA92163A773004EB37B /* CustomTextField.swift */; };
+		D4B39CAC2163A879004EB37B /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B39CAB2163A879004EB37B /* UIColorExt.swift */; };
+		D4B39CAF2163AF5F004EB37B /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B39CAE2163AF5F004EB37B /* UIViewExt.swift */; };
+		D4B39CB12163B117004EB37B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B39CB02163B117004EB37B /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58189E7E5F43A5AAF3FD4DFB /* Pods_fortune_rpg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fortune_rpg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7158D89BE8C6051EE3E8FE65 /* Pods-fortune-rpg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fortune-rpg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fortune-rpg/Pods-fortune-rpg.debug.xcconfig"; sourceTree = "<group>"; };
+		BF4C80F9096BCFDD9CCD0A70 /* Pods-fortune-rpg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fortune-rpg.release.xcconfig"; path = "Pods/Target Support Files/Pods-fortune-rpg/Pods-fortune-rpg.release.xcconfig"; sourceTree = "<group>"; };
 		D4A63CE0216375D500B8F5F4 /* fortune-rpg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fortune-rpg.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A63CE3216375D500B8F5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4A63CE5216375D500B8F5F4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +36,12 @@
 		D4A63CEF216375D600B8F5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4A63CF1216375D600B8F5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4A63CFB216379CF00B8F5F4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D4A63CFD216383D900B8F5F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D4B39CA7216399AF004EB37B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D4B39CA92163A773004EB37B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D4B39CAB2163A879004EB37B /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		D4B39CAE2163AF5F004EB37B /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		D4B39CB02163B117004EB37B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E29EF14D8971C2AFB123BE0 /* Pods_fortune_rpg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BDB6EAE642A7057F2D07622 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58189E7E5F43A5AAF3FD4DFB /* Pods_fortune_rpg.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D4A63CD7216375D500B8F5F4 = {
 			isa = PBXGroup;
 			children = (
 				D4A63CE2216375D500B8F5F4 /* fortune-rpg */,
 				D4A63CE1216375D500B8F5F4 /* Products */,
+				E59F96333B3DB13A9D87DF95 /* Pods */,
+				0BDB6EAE642A7057F2D07622 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +85,7 @@
 		D4A63CE2216375D500B8F5F4 /* fortune-rpg */ = {
 			isa = PBXGroup;
 			children = (
+				D4B39CAD2163AF3D004EB37B /* Extension */,
 				D4A63CFA2163793A00B8F5F4 /* Services */,
 				D4A63CF7216378EC00B8F5F4 /* Model */,
 				D4A63CF8216378FF00B8F5F4 /* View */,
@@ -69,6 +97,7 @@
 				D4A63CEC216375D600B8F5F4 /* Assets.xcassets */,
 				D4A63CEE216375D600B8F5F4 /* LaunchScreen.storyboard */,
 				D4A63CF1216375D600B8F5F4 /* Info.plist */,
+				D4A63CFD216383D900B8F5F4 /* GoogleService-Info.plist */,
 			);
 			path = "fortune-rpg";
 			sourceTree = "<group>";
@@ -83,6 +112,7 @@
 		D4A63CF8216378FF00B8F5F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D4B39CA92163A773004EB37B /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,6 +120,7 @@
 		D4A63CF92163792000B8F5F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D4B39CB02163B117004EB37B /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -98,8 +129,27 @@
 			isa = PBXGroup;
 			children = (
 				D4A63CFB216379CF00B8F5F4 /* DataService.swift */,
+				D4B39CA7216399AF004EB37B /* AuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D4B39CAD2163AF3D004EB37B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D4B39CAB2163A879004EB37B /* UIColorExt.swift */,
+				D4B39CAE2163AF5F004EB37B /* UIViewExt.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E59F96333B3DB13A9D87DF95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7158D89BE8C6051EE3E8FE65 /* Pods-fortune-rpg.debug.xcconfig */,
+				BF4C80F9096BCFDD9CCD0A70 /* Pods-fortune-rpg.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4A63CF4216375D600B8F5F4 /* Build configuration list for PBXNativeTarget "fortune-rpg" */;
 			buildPhases = (
+				5A43B105FD61B6404ED5F33B /* [CP] Check Pods Manifest.lock */,
 				D4A63CDC216375D500B8F5F4 /* Sources */,
 				D4A63CDD216375D500B8F5F4 /* Frameworks */,
 				D4A63CDE216375D500B8F5F4 /* Resources */,
+				8DB4402CE6F350DA0BFECFEB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,12 +213,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4A63CF0216375D600B8F5F4 /* LaunchScreen.storyboard in Resources */,
+				D4A63CFE216383D900B8F5F4 /* GoogleService-Info.plist in Resources */,
 				D4A63CED216375D600B8F5F4 /* Assets.xcassets in Resources */,
 				D4A63CEB216375D500B8F5F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A43B105FD61B6404ED5F33B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fortune-rpg-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DB4402CE6F350DA0BFECFEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-fortune-rpg/Pods-fortune-rpg-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fortune-rpg/Pods-fortune-rpg-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4A63CDC216375D500B8F5F4 /* Sources */ = {
@@ -175,6 +273,11 @@
 			files = (
 				D4A63CE8216375D500B8F5F4 /* SecondViewController.swift in Sources */,
 				D4A63CE4216375D500B8F5F4 /* AppDelegate.swift in Sources */,
+				D4B39CAA2163A773004EB37B /* CustomTextField.swift in Sources */,
+				D4B39CA8216399AF004EB37B /* AuthService.swift in Sources */,
+				D4B39CAF2163AF5F004EB37B /* UIViewExt.swift in Sources */,
+				D4B39CB12163B117004EB37B /* LoginVC.swift in Sources */,
+				D4B39CAC2163A879004EB37B /* UIColorExt.swift in Sources */,
 				D4A63CE6216375D500B8F5F4 /* FirstViewController.swift in Sources */,
 				D4A63CFC216379CF00B8F5F4 /* DataService.swift in Sources */,
 			);
@@ -320,6 +423,7 @@
 		};
 		D4A63CF5216375D600B8F5F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7158D89BE8C6051EE3E8FE65 /* Pods-fortune-rpg.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +442,7 @@
 		};
 		D4A63CF6216375D600B8F5F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF4C80F9096BCFDD9CCD0A70 /* Pods-fortune-rpg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
