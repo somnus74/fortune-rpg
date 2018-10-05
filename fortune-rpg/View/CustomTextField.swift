@@ -11,7 +11,7 @@ import UIKit
 class CustomTextField: UITextField {
 
     override func awakeFromNib() {
-        let placeholder = NSAttributedString(string: self.placeholder!, attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexColor: "AB4339")])
+        let placeholder = NSAttributedString(string: self.placeholder!, attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexColor: "3A53A5")])
         self.attributedPlaceholder = placeholder
         super.awakeFromNib()
     }

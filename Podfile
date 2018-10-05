@@ -7,7 +7,7 @@ target 'fortune-rpg' do
 
   # Pods for fortune-rpg
   pod 'Firebase/Core'
-  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
 
 end
