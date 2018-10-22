@@ -20,6 +20,7 @@ class CharactersVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         loadCharacters()
+        tableView.reloadData()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -81,11 +82,12 @@ extension CharactersVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell", for: indexPath) as? CharacterCell else { return UITableViewCell() }
-        if let name = characters[indexPath.row].name {
+        if let name = characters[indexPath.row].elements["main"]!["name"]!.value {
             cell.nameLbl.text = name
         } else {
             cell.nameLbl.text = "New character"
         }
+        cell.backgroundColor = UIColor(hexColor: "29314c")
         return cell
     }
 
@@ -99,7 +101,7 @@ extension CharactersVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
-            let title = "Delete \(self.characters[indexPath.row].name!)?"
+            let title = "Delete \(self.characters[indexPath.row].elements["main"]!["name"]!.value ?? "no character name")?"
             let message = "Are you sure you want to delete this character?"
             let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
             let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

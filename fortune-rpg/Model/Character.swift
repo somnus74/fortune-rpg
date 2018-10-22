@@ -9,31 +9,43 @@
 import Foundation
 
 class Character {
+    static let sectionNames = ["Main", "Attributes", "Derived Attributes", "Traits"]
+    
     var documentId: String!
+    var ownerId: String!
     
-    var owner: String
-    var name: String!
+    var elements = Dictionary<String, Dictionary<String, Element>>()
     var campaign: Campaign!
-    var level: Int = 0
-    
-    var attributes = [Attribute]()
-    var traits = [Trait]()
-    var motivations = [String]()
-    var problems = [String]()
-    var equipment = [Equipment]()
+    var DP: Int = 0
     
     init() {
-        self.owner = AuthService.instance.uid
-        self.name = "New Character"
+        // deep copy
+        for (skey, section) in System.instance.allElements {
+            elements[skey] = Dictionary<String, Element>()
+            for (key, value) in section {
+                if value.mandatory {
+                    elements[skey]![key] = value.copy()
+                }
+            }
+        }
+        ownerId = AuthService.instance.uid
+        elements["main"]!["owner"]?.value = AuthService.instance.userName ?? "userName error"
+        elements["main"]!["name"]?.value = "New Character"
+        update_all()
     }
     
     func flatpack() -> Dictionary<String, Any> {
         var packed = Dictionary<String, Any>()
         
-        packed["owner"] = owner
-        packed["name"] = name
         //packed["campaignId"] = campaign.documentId
-        
+        for (skey, section) in elements {
+            var newSection = Dictionary<String, Any>()
+            for (key, value) in section {
+                newSection[key] = value.asDict()
+            }
+            packed[skey] = newSection
+        }
+        packed["ownerId"] = ownerId
         
         return packed
     }
@@ -41,62 +53,44 @@ class Character {
     convenience init(documentId: String, data: Dictionary<String, Any>) {
         self.init()
         self.documentId = documentId
-        for (key, value) in data {
+        for (key, element) in data {
             switch key {
-            case "name":
-                self.name = valconvert(value, key: key)
+            case "ownerId":
+                guard let testId = element as? String else {
+                    debugPrint("OwnerId conversion error in document: \(documentId)")
+                    return
+                }
+                // check owner is self?
+                ownerId = testId
             case "campaign":
                 // find campaign - campaigns must be loaded first
-                print("Campaign Id: \(String(describing: valconvert(value, key: key)))")
-            case "owner":
-                if self.owner != valconvert(value, key: key) {
-                    debugPrint("Character owner not this user!")
+                guard let testId = element as? String else {
+                    debugPrint("CampaignId conversion error in document: \(documentId)")
+                    return
                 }
+                print("Campaign Id: \(testId)")
             default:
-                debugPrint("Unknown key: \(key)")
-                
+                guard let section = element as? Dictionary<String, Any> else {
+                    debugPrint("Conversion error in document: \(documentId), section: \(key)")
+                    return
+                }
+                elements[key] = Dictionary<String, Element>()
+                for (ekey, element2) in section {
+                    guard let elemdata = element2 as? Dictionary<String, Any> else {
+                        debugPrint("Conversion error in document: \(documentId), section: \(key), element: \(ekey)")
+                        return
+                    }
+                    self.elements[key]![ekey] = Element(data: elemdata)
+                }
             }
         }
+        update_all()
     }
     
-    func valconvert(_ value: Any, key: String? = nil) -> String! {
-        guard let result = value as? String else {
-            debugPrint("Conversion error in: \(String(describing: key)), Value: \(value)")
-            return nil
-        }
-        return result
-    }
-}
-
-
-class Attribute {
-    var name: String
-    var value: Int = 0
-    
-    init(name: String) {
-        self.name = name
+    func update_all() {
+        System.instance.setDerived(self)
+        System.instance.changeBackground(self)
     }
     
-}
-
-
-class Trait {
-    var name: String
-
-    init(name: String) {
-        self.name = name
-    }
-    
-}
-
-
-class Equipment {
-    var name: String
-    var load: Int = 0
-
-    init(name: String) {
-        self.name = name
-    }
-
 }
 

@@ -25,11 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DB.settings = settings
         
         if !AuthService.instance.loggedIn {
-            debugPrint("Starting app with user id: " + AuthService.instance.uid)
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
             window?.makeKeyAndVisible()
             window?.rootViewController?.present(loginVC, animated: false, completion: nil)
+        } else {
+            debugPrint("Starting app with user id: " + AuthService.instance.uid)
         }
         
         return true

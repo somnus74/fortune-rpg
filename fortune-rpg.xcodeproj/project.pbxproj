@@ -25,6 +25,8 @@
 		D4B39CB12163B117004EB37B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B39CB02163B117004EB37B /* LoginVC.swift */; };
 		D4EDC848216781DF00E0538E /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDC847216781DF00E0538E /* CharacterCell.swift */; };
 		D4EDC84A21679B7100E0538E /* CharacterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDC84921679B7100E0538E /* CharacterVC.swift */; };
+		D4EDC84C2168290400E0538E /* AbilityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDC84B2168290400E0538E /* AbilityCell.swift */; };
+		D4EDC84E21683CA100E0538E /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDC84D21683CA100E0538E /* System.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		D4B39CB02163B117004EB37B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		D4EDC847216781DF00E0538E /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		D4EDC84921679B7100E0538E /* CharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterVC.swift; sourceTree = "<group>"; };
+		D4EDC84B2168290400E0538E /* AbilityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityCell.swift; sourceTree = "<group>"; };
+		D4EDC84D21683CA100E0538E /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 			children = (
 				D400C29D2164FCBC008C5A6C /* Character.swift */,
 				D400C29F2164FDA3008C5A6C /* Campaign.swift */,
+				D4EDC84D21683CA100E0538E /* System.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			children = (
 				D4B39CA92163A773004EB37B /* CustomTextField.swift */,
 				D4EDC847216781DF00E0538E /* CharacterCell.swift */,
+				D4EDC84B2168290400E0538E /* AbilityCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,7 +311,9 @@
 				D4B39CA8216399AF004EB37B /* AuthService.swift in Sources */,
 				D4B39CAF2163AF5F004EB37B /* UIViewExt.swift in Sources */,
 				D4B39CB12163B117004EB37B /* LoginVC.swift in Sources */,
+				D4EDC84C2168290400E0538E /* AbilityCell.swift in Sources */,
 				D4B39CAC2163A879004EB37B /* UIColorExt.swift in Sources */,
+				D4EDC84E21683CA100E0538E /* System.swift in Sources */,
 				D400C29E2164FCBC008C5A6C /* Character.swift in Sources */,
 				D400C2A02164FDA3008C5A6C /* Campaign.swift in Sources */,
 				D4A63CE6216375D500B8F5F4 /* CharactersVC.swift in Sources */,
@@ -459,6 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PBM6WA84ZP;
 				INFOPLIST_FILE = "fortune-rpg/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PBM6WA84ZP;
 				INFOPLIST_FILE = "fortune-rpg/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

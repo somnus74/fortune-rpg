@@ -39,7 +39,7 @@ class DataService {
     }
     
     func getCharactersForUser(handler: @escaping (_ characters: [Character]) -> ()) {
-        REF_CHARS.whereField("owner", isEqualTo: AuthService.instance.uid).getDocuments { (querySnapshot, error) in
+        REF_CHARS.whereField("ownerId", isEqualTo: AuthService.instance.uid).getDocuments { (querySnapshot, error) in
             if let error = error {
                 debugPrint("Error getting characters: \(error)")
                 handler([Character]())
@@ -77,6 +77,19 @@ class DataService {
                 completion(false)
             }
             completion(true)
+        }
+    }
+    
+    func saveCharacter(character: Character, completion: @escaping (_ success: Bool) -> ()) {
+        let characterData = character.flatpack()
+        REF_CHARS.document(character.documentId).updateData(characterData) { error in
+            if let error = error {
+                debugPrint("Error saving document: \(error)")
+                completion(false)
+            } else {
+                debugPrint("Successfully saved character: \(String(describing: character.documentId))")
+                completion(true)
+            }
         }
     }
     
