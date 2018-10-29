@@ -9,7 +9,6 @@
 import Foundation
 
 class Character {
-    static let sectionNames = ["Main", "Attributes", "Derived Attributes", "Traits"]
     
     var documentId: String!
     var ownerId: String!

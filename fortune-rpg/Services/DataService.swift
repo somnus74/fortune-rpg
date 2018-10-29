@@ -20,9 +20,9 @@ class DataService {
     func createDBUser(uid: String, userData: Dictionary<String, Any>) {
         REF_USERS.document(uid).setData(userData) { err in
             if let err = err {
-                print("Error writing document: \(err)")
+                debugPrint("Error writing document: \(err)")
             } else {
-                print("Document successfully written for user \(uid)")
+                //debugPrint("Document successfully written for user \(uid)")
             }
         }
     }
@@ -33,7 +33,7 @@ class DataService {
             if let error = error {
                 debugPrint("Error getting user data: \(error)")
             } else {
-                debugPrint("User data: \(userData)")
+                //debugPrint("User data: \(userData)")
             }
         }
     }
@@ -46,7 +46,7 @@ class DataService {
             } else {
                 var characters = [Character]()
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                    //print("\(document.documentID) => \(document.data())")
                     let character = Character(documentId: document.documentID, data: document.data())
                     characters.append(character)
                 }
@@ -87,7 +87,7 @@ class DataService {
                 debugPrint("Error saving document: \(error)")
                 completion(false)
             } else {
-                debugPrint("Successfully saved character: \(String(describing: character.documentId))")
+                //debugPrint("Successfully saved character: \(String(describing: character.documentId))")
                 completion(true)
             }
         }

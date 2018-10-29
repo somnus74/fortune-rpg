@@ -88,6 +88,10 @@ extension CharactersVC: UITableViewDelegate, UITableViewDataSource {
             cell.nameLbl.text = "New character"
         }
         cell.backgroundColor = UIColor(hexColor: "29314c")
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor(hexColor: "965929")
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
     }
 

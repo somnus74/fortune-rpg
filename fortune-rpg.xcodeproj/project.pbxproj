@@ -10,6 +10,8 @@
 		4E29EF14D8971C2AFB123BE0 /* Pods_fortune_rpg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58189E7E5F43A5AAF3FD4DFB /* Pods_fortune_rpg.framework */; };
 		D400C29E2164FCBC008C5A6C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400C29D2164FCBC008C5A6C /* Character.swift */; };
 		D400C2A02164FDA3008C5A6C /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400C29F2164FDA3008C5A6C /* Campaign.swift */; };
+		D445D4DF217FEC770036DD5D /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445D4DE217FEC770036DD5D /* UITextFieldExt.swift */; };
+		D445D4E1218129590036DD5D /* MovingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445D4E0218129590036DD5D /* MovingView.swift */; };
 		D4A63CE4216375D500B8F5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A63CE3216375D500B8F5F4 /* AppDelegate.swift */; };
 		D4A63CE6216375D500B8F5F4 /* CharactersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A63CE5216375D500B8F5F4 /* CharactersVC.swift */; };
 		D4A63CE8216375D500B8F5F4 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A63CE7216375D500B8F5F4 /* UserInfoVC.swift */; };
@@ -23,6 +25,7 @@
 		D4B39CAC2163A879004EB37B /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B39CAB2163A879004EB37B /* UIColorExt.swift */; };
 		D4B39CAF2163AF5F004EB37B /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B39CAE2163AF5F004EB37B /* UIViewExt.swift */; };
 		D4B39CB12163B117004EB37B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B39CB02163B117004EB37B /* LoginVC.swift */; };
+		D4BB28F1218141B00017BC73 /* CharacterHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BB28F0218141B00017BC73 /* CharacterHeaderCell.swift */; };
 		D4EDC848216781DF00E0538E /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDC847216781DF00E0538E /* CharacterCell.swift */; };
 		D4EDC84A21679B7100E0538E /* CharacterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDC84921679B7100E0538E /* CharacterVC.swift */; };
 		D4EDC84C2168290400E0538E /* AbilityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDC84B2168290400E0538E /* AbilityCell.swift */; };
@@ -35,6 +38,8 @@
 		BF4C80F9096BCFDD9CCD0A70 /* Pods-fortune-rpg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fortune-rpg.release.xcconfig"; path = "Pods/Target Support Files/Pods-fortune-rpg/Pods-fortune-rpg.release.xcconfig"; sourceTree = "<group>"; };
 		D400C29D2164FCBC008C5A6C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		D400C29F2164FDA3008C5A6C /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
+		D445D4DE217FEC770036DD5D /* UITextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
+		D445D4E0218129590036DD5D /* MovingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingView.swift; sourceTree = "<group>"; };
 		D4A63CE0216375D500B8F5F4 /* fortune-rpg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fortune-rpg.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A63CE3216375D500B8F5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4A63CE5216375D500B8F5F4 /* CharactersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersVC.swift; sourceTree = "<group>"; };
@@ -50,6 +55,7 @@
 		D4B39CAB2163A879004EB37B /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
 		D4B39CAE2163AF5F004EB37B /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		D4B39CB02163B117004EB37B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		D4BB28F0218141B00017BC73 /* CharacterHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterHeaderCell.swift; sourceTree = "<group>"; };
 		D4EDC847216781DF00E0538E /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		D4EDC84921679B7100E0538E /* CharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterVC.swift; sourceTree = "<group>"; };
 		D4EDC84B2168290400E0538E /* AbilityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityCell.swift; sourceTree = "<group>"; };
@@ -128,6 +134,8 @@
 				D4B39CA92163A773004EB37B /* CustomTextField.swift */,
 				D4EDC847216781DF00E0538E /* CharacterCell.swift */,
 				D4EDC84B2168290400E0538E /* AbilityCell.swift */,
+				D445D4E0218129590036DD5D /* MovingView.swift */,
+				D4BB28F0218141B00017BC73 /* CharacterHeaderCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +165,7 @@
 			children = (
 				D4B39CAB2163A879004EB37B /* UIColorExt.swift */,
 				D4B39CAE2163AF5F004EB37B /* UIViewExt.swift */,
+				D445D4DE217FEC770036DD5D /* UITextFieldExt.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -310,10 +319,13 @@
 				D4EDC848216781DF00E0538E /* CharacterCell.swift in Sources */,
 				D4B39CA8216399AF004EB37B /* AuthService.swift in Sources */,
 				D4B39CAF2163AF5F004EB37B /* UIViewExt.swift in Sources */,
+				D445D4DF217FEC770036DD5D /* UITextFieldExt.swift in Sources */,
+				D4BB28F1218141B00017BC73 /* CharacterHeaderCell.swift in Sources */,
 				D4B39CB12163B117004EB37B /* LoginVC.swift in Sources */,
 				D4EDC84C2168290400E0538E /* AbilityCell.swift in Sources */,
 				D4B39CAC2163A879004EB37B /* UIColorExt.swift in Sources */,
 				D4EDC84E21683CA100E0538E /* System.swift in Sources */,
+				D445D4E1218129590036DD5D /* MovingView.swift in Sources */,
 				D400C29E2164FCBC008C5A6C /* Character.swift in Sources */,
 				D400C2A02164FDA3008C5A6C /* Campaign.swift in Sources */,
 				D4A63CE6216375D500B8F5F4 /* CharactersVC.swift in Sources */,

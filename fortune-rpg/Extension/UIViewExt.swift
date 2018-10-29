@@ -15,6 +15,7 @@ extension UIView {
     func bindToKeyboard(_ tabHeight: CGFloat) {
         //self.tabHeight = tabHeight
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(_:)), name: UIResponder.keyboardDidChangeFrameNotification, object: nil)
     }
     
     @objc func keyboardWillChange(_ notification: NSNotification) {
@@ -25,6 +26,7 @@ extension UIView {
 //        let curve = notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
 //        let startingFrame = (notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         let endingFrame = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let keyboardHeight = endingFrame.height
 
         //let deltaY = endingFrame.origin.y + endingFrame.height > tabHeight ? endingFrame.origin.y  - startingFrame.origin.y : endingFrame.origin.y - startingFrame.origin.y - tabHeight
         //let deltaY = endingFrame.origin.y - startingFrame.origin.y
@@ -34,7 +36,15 @@ extension UIView {
 //            self.frame.origin.y = finalY
 //        }, completion: nil)
 //        debugPrint("changing frame, y = \(finalY)")
-        self.frame.origin.y = finalY
+        //self.frame.origin.y = finalY
+        
+        for constraint in self.constraints {
+            if constraint.identifier == "bottom" {
+                debugPrint("updating constraint to height \(keyboardHeight)")
+                constraint.constant = keyboardHeight
+            }
+        }
+        self.layoutIfNeeded()
     }
 }
 
