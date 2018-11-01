@@ -16,6 +16,7 @@ class Character {
     var elements = Dictionary<String, Dictionary<String, Element>>()
     var campaign: Campaign!
     var DP: Int = 0
+    var equip_num = 0
     
     init() {
         // deep copy
@@ -80,6 +81,9 @@ class Character {
                         return
                     }
                     self.elements[key]![ekey] = Element(data: elemdata)
+                    if ekey == "equipment" {
+                        equip_num = max(equip_num, self.elements[key]![ekey]!.ivalue!)
+                    }
                 }
             }
         }
@@ -87,9 +91,10 @@ class Character {
     }
     
     func update_all() {
-        System.instance.setDerived(self)
         System.instance.changeBackground(self)
+        System.instance.setDerived(self)
     }
+    
     
 }
 

@@ -145,11 +145,11 @@ class CharacterVC: UIViewController {
                 debugPrint("Failed to write character: \(String(describing: self.character.documentId))")
             }
         }
-        ivalTxt.text = String(describing: Int(stepper.value))
+        //ivalTxt.text = String(describing: Int(stepper.value))
     }
     
     @objc func keyboardWillChange(_ notification: NSNotification) {
-        let tabHeight = (tabBarController?.tabBar.frame.size.height)!
+        let tabHeight = tabBarController?.tabBar.frame.size.height ?? 0
         let endingFrame = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         var keyboardHeight = endingFrame.height
         if keyboardHeight > tabHeight {
@@ -163,9 +163,14 @@ class CharacterVC: UIViewController {
     
     func selNewElement(section: String) {
         //debugPrint("starting picker with section: \(section)")
+        if section == "equipment" {
+            System.instance.add_equip(character)
+            tableView.reloadData()
+            return
+        }
+        
         selPickerSec = section
         pickerSelections.removeAll()
-        
         if selPickerSec == "traits" {
             pickerSelections = System.instance.ava_traits(character)
         } else {
@@ -290,7 +295,7 @@ extension CharacterVC: UITableViewDelegate, UITableViewDataSource {
             headerCell.arrowBtn.setImage(UIImage(named: "uiarrow"), for: .normal)
         }
         let secname = System.instance.sectionKeys[section]
-        if secname == "careers" || secname == "skills" || secname == "traits" {
+        if secname == "careers" || secname == "skills" || secname == "traits" || secname == "equipment" {
             headerCell.addBtn.isHidden = false
         } else {
             headerCell.addBtn.isHidden = true
