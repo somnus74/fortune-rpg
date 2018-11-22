@@ -24,8 +24,8 @@ class System {
     // class which represents the Fortune system
     static let instance = System()
   
-    let sectionKeys = ["main", "attributes", "derived", "careers", "skills", "traits", "equipment"]
-    let sectionNames = ["Main", "Attributes", "Derived Attributes", "Careers", "Skills", "Traits", "Equipment"]
+    let sectionKeys = ["main", "attributes", "derived", "careers", "skills", "traits", "equipment", "actions"]
+    let sectionNames = ["Main", "Attributes", "Derived Attributes", "Careers", "Skills", "Traits", "Equipment", "Actions"]
 
     var allElements: Dictionary<String, Dictionary<String, Element>> = [
         "main": [
@@ -256,7 +256,8 @@ class System {
             "advancedtr": Element("Advanced Training", type: .derText, order: 1411, value: "You can give your animal companion a trait from another class, treat their attack bonus as their level", ivalue: 2, mandatory: false, req: "tamer7"),
 
         ],
-        "equipment": [String: Element]()
+        "equipment": [String: Element](),
+        "actions": [String: Element]()
             
     ]
     

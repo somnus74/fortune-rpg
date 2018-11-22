@@ -50,7 +50,7 @@ class AuthService {
         }
     }
     
-    func loginUser(userName: String, email: String, password: String, completion: @escaping (_ status: Bool, _ error: Error?) -> ()) {
+    func loginUser(email: String, password: String, completion: @escaping (_ status: Bool, _ error: Error?) -> ()) {
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
             if error == nil {
                 guard let dbuser = authResult?.user else {

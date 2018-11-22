@@ -11,48 +11,60 @@ import UIKit
 class LoginVC: UIViewController, UITextFieldDelegate {
 
     // outlets
-    @IBOutlet weak var usernameTxtField: CustomTextField!
     @IBOutlet weak var emailTxtField: CustomTextField!
     @IBOutlet weak var passwordTxtField: CustomTextField!
+    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var registerBtn: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameTxtField.delegate = self
         emailTxtField.delegate = self
         passwordTxtField.delegate = self
+        
+        loginBtn.layer.borderWidth = 1
+        registerBtn.layer.borderWidth = 1
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if AuthService.instance.loggedIn {
+            dismiss(animated: false, completion: nil)
+        }
     }
     
     @IBAction func loginButton(_ sender: Any) {
         if validEntry() {
-            AuthService.instance.loginUser(userName: usernameTxtField.text!, email: emailTxtField.text!, password: passwordTxtField.text!) { (success, loginError) in
+            AuthService.instance.loginUser(email: emailTxtField.text!, password: passwordTxtField.text!) { (success, loginError) in
                 if success {
                     self.dismiss(animated: false, completion: nil)
-                    debugPrint("Successfully logged in user \(self.usernameTxtField.text!)")
+                    debugPrint("Successfully logged in user \(self.emailTxtField.text!)")
                     return
                 } else {
                     debugPrint(String(describing: loginError?.localizedDescription))
-                }
-                
-                AuthService.instance.registerUser(username: self.usernameTxtField.text!, email: self.emailTxtField.text!, password: self.passwordTxtField.text!) { (success, regError) in
-                    if success {
-                        AuthService.instance.loginUser(userName: self.usernameTxtField.text!, email: self.emailTxtField.text!, password: self.passwordTxtField.text!) { (success, nil) in
-                            self.dismiss(animated: false, completion: nil)
-                            debugPrint("Successfully registered user \(self.usernameTxtField.text!)")
-                        }
-                    } else {
-                        debugPrint(String(describing: regError?.localizedDescription))
-                    }
-                }
+                    let alert = UIAlertController(title: "Login Error", message: "Could not log in user \(self.emailTxtField.text!)", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: false, completion: nil)
 
+                }
             }
+        } else {
+            let alert = UIAlertController(title: "Entry Error", message: "Email or Password not entered", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: false, completion: nil)
+
         }
     }
     
+    @IBAction func registerBtnPress(_ sender: Any) {
+        let registerVC = self.storyboard?.instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
+        self.present(registerVC!, animated: false, completion: nil)
+
+    }
+    
+    
     func validEntry() -> Bool {
-        if usernameTxtField == nil {return false}
-        if emailTxtField == nil {return false}
-        if passwordTxtField == nil {return false}
+        if emailTxtField == nil || emailTxtField.text == "" {return false}
+        if passwordTxtField == nil || passwordTxtField.text == "" {return false}
         return true
     }
 

@@ -23,6 +23,8 @@ class CharacterVC: UIViewController {
     @IBOutlet weak var inputViewBottomLayout: NSLayoutConstraint!
     @IBOutlet weak var rollBtnStack: UIStackView!
     
+    var newEditView: UIView!
+    
     
     let otherPicker = UIPickerView()
     
@@ -67,6 +69,26 @@ class CharacterVC: UIViewController {
     }
 
     func setupElemView(_ element: Element) {
+        if element.type == .freetext {
+            editingView.isHidden = true
+            newEditView = EquipEditView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+            view.addSubview(newEditView)
+            let editHeightC = newEditView.heightAnchor.constraint(equalToConstant: 180)
+            editHeightC.isActive = true
+            let editBotC = newEditView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -1.0 * (tabBarController?.tabBar.frame.size.height ?? 0))
+            editBotC.isActive = true
+            let editLeftC = newEditView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
+            editLeftC.isActive = true
+            let editRightC = newEditView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0)
+            editRightC.isActive = true
+            return
+        } else {
+            if newEditView != nil {
+                newEditView.isHidden = true
+            }
+            editingView.isHidden = false
+        }
+        
         curElement = element
         nameLbl.isHidden = false
         nameLbl.text = element.name

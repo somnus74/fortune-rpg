@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -200,7 +200,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAl-KQ-8UI">
                                 <rect key="frame" x="0.0" y="438" width="375" height="180"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LLt-JX-ouv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Namex" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LLt-JX-ouv" userLabel="Name Lbl">
                                         <rect key="frame" x="8" y="8" width="100" height="18.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="46s-Y1-dI0"/>
@@ -382,11 +382,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VuW-r0-r6V">
-                                <rect key="frame" x="8" y="84" width="359" height="148.5"/>
+                                <rect key="frame" x="8" y="100" width="359" height="148.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.031372549020000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DKX-8p-9L6">
-                                <rect key="frame" x="24" y="100" width="327" height="116.5"/>
+                                <rect key="frame" x="24" y="116" width="327" height="116.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnl-h4-LAp">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="31.5"/>
@@ -412,8 +412,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3E-dg-3C7">
-                                <rect key="frame" x="299" y="20" width="60" height="30"/>
-                                <color key="backgroundColor" red="0.58823529411764708" green="0.34901960784313724" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="299" y="44" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.35294117650000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="icO-Ki-8fF"/>
                                     <constraint firstAttribute="height" constant="30" id="yS8-XM-gUX"/>
@@ -433,8 +433,8 @@
                             <constraint firstItem="VuW-r0-r6V" firstAttribute="top" secondItem="DKX-8p-9L6" secondAttribute="top" constant="-16" id="4hx-TM-Ii8"/>
                             <constraint firstItem="VuW-r0-r6V" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="8" id="etU-oP-ArL"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="VuW-r0-r6V" secondAttribute="trailing" constant="8" id="l6Q-kQ-1wh"/>
-                            <constraint firstItem="DKX-8p-9L6" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="80" id="qka-vr-SJj"/>
-                            <constraint firstItem="t3E-dg-3C7" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="r1d-2j-jdD"/>
+                            <constraint firstItem="DKX-8p-9L6" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="96" id="qka-vr-SJj"/>
+                            <constraint firstItem="t3E-dg-3C7" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="24" id="r1d-2j-jdD"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="DKX-8p-9L6" secondAttribute="trailing" constant="24" id="wzs-pn-aPa"/>
                             <constraint firstItem="VuW-r0-r6V" firstAttribute="bottom" secondItem="DKX-8p-9L6" secondAttribute="bottom" constant="16" id="xhH-2a-Q3a"/>
                         </constraints>
@@ -450,6 +450,102 @@
             </objects>
             <point key="canvasLocation" x="709.60000000000002" y="-716.49175412293857"/>
         </scene>
+        <!--RegisterVC-->
+        <scene sceneID="pTV-sp-PdR">
+            <objects>
+                <viewController storyboardIdentifier="RegisterVC" id="2Gg-PB-Z1u" customClass="RegisterVC" customModule="fortune_rpg" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EYB-MJ-QJR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bot-8i-qVi">
+                                <rect key="frame" x="16" y="116" width="343" height="330"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGISTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxm-wX-6Sj">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="42"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="user name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oer-da-1nK" customClass="CustomTextField" customModule="fortune_rpg" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="62" width="343" height="36"/>
+                                        <color key="backgroundColor" red="0.58823529409999997" green="0.34901960780000002" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0F-ir-ea6" customClass="CustomTextField" customModule="fortune_rpg" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="118" width="343" height="36"/>
+                                        <color key="backgroundColor" red="0.58823529409999997" green="0.34901960780000002" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BjL-R6-9qP" customClass="CustomTextField" customModule="fortune_rpg" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="174" width="343" height="36"/>
+                                        <color key="backgroundColor" red="0.58823529409999997" green="0.34901960780000002" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="check password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YVt-u9-i2I" customClass="CustomTextField" customModule="fortune_rpg" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="230" width="343" height="36"/>
+                                        <color key="backgroundColor" red="0.58823529409999997" green="0.34901960780000002" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sG0-8z-CqM" userLabel="register">
+                                        <rect key="frame" x="0.0" y="286" width="343" height="44"/>
+                                        <color key="backgroundColor" red="0.32549019610000002" green="0.35294117650000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <state key="normal" title="REGISTER">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerBtnPress:" destination="2Gg-PB-Z1u" eventType="touchUpInside" id="nEz-PC-hqF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uO-vj-PAO">
+                                <rect key="frame" x="16" y="44" width="50" height="30"/>
+                                <color key="backgroundColor" red="0.58823529409999997" green="0.34901960780000002" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="t1I-da-1ZS"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="8" minY="4" maxX="8" maxY="4"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeBtnPress:" destination="2Gg-PB-Z1u" eventType="touchUpInside" id="naB-jn-7WJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.19215686269999999" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5uO-vj-PAO" firstAttribute="top" secondItem="ghu-uL-LWy" secondAttribute="top" constant="24" id="J2J-Hm-oZN"/>
+                            <constraint firstItem="bot-8i-qVi" firstAttribute="leading" secondItem="ghu-uL-LWy" secondAttribute="leading" constant="16" id="KGz-oo-teb"/>
+                            <constraint firstItem="ghu-uL-LWy" firstAttribute="trailing" secondItem="bot-8i-qVi" secondAttribute="trailing" constant="16" id="VVX-Gg-Lbe"/>
+                            <constraint firstItem="bot-8i-qVi" firstAttribute="top" secondItem="ghu-uL-LWy" secondAttribute="top" constant="96" id="aVd-DM-7pP"/>
+                            <constraint firstItem="5uO-vj-PAO" firstAttribute="leading" secondItem="ghu-uL-LWy" secondAttribute="leading" constant="16" id="arx-uz-b3b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ghu-uL-LWy"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTxt" destination="w0F-ir-ea6" id="0bn-ci-qLi"/>
+                        <outlet property="password2Txt" destination="YVt-u9-i2I" id="GRw-Xe-g3d"/>
+                        <outlet property="passwordTxt" destination="BjL-R6-9qP" id="r4g-nd-DA1"/>
+                        <outlet property="registerBtn" destination="sG0-8z-CqM" id="gpS-Sj-9tH"/>
+                        <outlet property="usernameTxt" destination="Oer-da-1nK" id="bEP-rz-Abc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAI-W0-LGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1302" y="-734"/>
+        </scene>
         <!--LoginVC-->
         <scene sceneID="XcH-dW-Zdz">
             <objects>
@@ -459,51 +555,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1GV-UO-1GB">
-                                <rect key="frame" x="16" y="100" width="343" height="274"/>
+                                <rect key="frame" x="16" y="116" width="343" height="333.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOG IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smo-ui-O7K">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="42"/>
-                                        <color key="backgroundColor" red="0.3921568627" green="0.1843137255" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="user name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SQS-bb-Fw3" customClass="CustomTextField" customModule="fortune_rpg" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBg-v0-2bS" customClass="CustomTextField" customModule="fortune_rpg" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="62" width="343" height="36"/>
                                         <color key="backgroundColor" red="0.58823529411764708" green="0.34901960784313724" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBg-v0-2bS" customClass="CustomTextField" customModule="fortune_rpg" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="118" width="343" height="36"/>
-                                        <color key="backgroundColor" red="0.58823529411764708" green="0.34901960784313724" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DkK-lZ-97H" customClass="CustomTextField" customModule="fortune_rpg" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="174" width="343" height="36"/>
+                                        <rect key="frame" x="0.0" y="118" width="343" height="36"/>
                                         <color key="backgroundColor" red="0.58823529411764708" green="0.34901960784313724" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJf-Na-olo">
-                                        <rect key="frame" x="0.0" y="230" width="343" height="44"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJf-Na-olo" userLabel="login">
+                                        <rect key="frame" x="0.0" y="174" width="343" height="44"/>
                                         <color key="backgroundColor" red="0.32549019607843138" green="0.3529411764705882" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
-                                        <state key="normal" title="LOG IN or REGISTER">
+                                        <state key="normal" title="LOG IN">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="loginButton:" destination="Lvb-ka-3LW" eventType="touchUpInside" id="bni-WE-NLQ"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1X-68-Yy7">
+                                        <rect key="frame" x="0.0" y="238" width="343" height="31.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnG-jI-xDa" userLabel="register">
+                                        <rect key="frame" x="0.0" y="289.5" width="343" height="44"/>
+                                        <color key="backgroundColor" red="0.32549019610000002" green="0.35294117650000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <state key="normal" title="REGISTER">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerBtnPress:" destination="Lvb-ka-3LW" eventType="touchUpInside" id="fha-RC-s1O"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPT-YI-Iom">
-                                <rect key="frame" x="16" y="20" width="55" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPT-YI-Iom">
+                                <rect key="frame" x="16" y="44" width="55" height="30"/>
                                 <color key="backgroundColor" red="0.58823529409999997" green="0.34901960780000002" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XKp-wl-IOR"/>
@@ -522,15 +629,16 @@
                             <constraint firstItem="1GV-UO-1GB" firstAttribute="leading" secondItem="oLL-gN-N5m" secondAttribute="leading" constant="16" id="3ao-8J-lnx"/>
                             <constraint firstItem="kPT-YI-Iom" firstAttribute="leading" secondItem="oLL-gN-N5m" secondAttribute="leading" constant="16" id="7Pl-TV-Wrg"/>
                             <constraint firstItem="oLL-gN-N5m" firstAttribute="trailing" secondItem="1GV-UO-1GB" secondAttribute="trailing" constant="16" id="RmL-fy-goM"/>
-                            <constraint firstItem="1GV-UO-1GB" firstAttribute="top" secondItem="oLL-gN-N5m" secondAttribute="top" constant="80" id="hma-ve-JJl"/>
-                            <constraint firstItem="kPT-YI-Iom" firstAttribute="top" secondItem="oLL-gN-N5m" secondAttribute="top" id="vQp-M2-7ug"/>
+                            <constraint firstItem="1GV-UO-1GB" firstAttribute="top" secondItem="oLL-gN-N5m" secondAttribute="top" constant="96" id="hma-ve-JJl"/>
+                            <constraint firstItem="kPT-YI-Iom" firstAttribute="top" secondItem="oLL-gN-N5m" secondAttribute="top" constant="24" id="vQp-M2-7ug"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oLL-gN-N5m"/>
                     </view>
                     <connections>
                         <outlet property="emailTxtField" destination="zBg-v0-2bS" id="pJh-OP-1al"/>
+                        <outlet property="loginBtn" destination="RJf-Na-olo" id="cz1-xg-JWj"/>
                         <outlet property="passwordTxtField" destination="DkK-lZ-97H" id="lPg-7U-d0g"/>
-                        <outlet property="usernameTxtField" destination="SQS-bb-Fw3" id="zPx-t6-4Vw"/>
+                        <outlet property="registerBtn" destination="fnG-jI-xDa" id="Y6D-IZ-J0L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9m-oh-R8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
