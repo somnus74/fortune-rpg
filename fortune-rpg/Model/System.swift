@@ -31,10 +31,10 @@ class System {
         "main": [
             "name" : Element("Name", type: .freetext, order: 1, value: "init name", mandatory: true),
             "player" : Element("Player", type: .derText, order: 2, value: AuthService.instance.userName, mandatory: true),
-            "description" : Element("Description", type: .freetext, order: 3, value: "", mandatory: true),
-            "level" : Element("Character Level", type: .derInt, order: 4, mandatory: true),
+            "description" : Element("Description", type: .freetext, order: 4, value: "", mandatory: true),
+            "level" : Element("Character Level", type: .derInt, order: 5, mandatory: true),
             "background" : Element("Background", type: .selText, order: 6, value: "Apoclast", mandatory: true),
-            "devpoints" : Element("Development Points", type: .freeInt, order: 5, ivalue: 60, mandatory: true)
+            "devpoints" : Element("Development Points", type: .freeInt, order: 7, ivalue: 60, mandatory: true)
         ],
         "attributes": [
             "might" : Element("Might", type: .freeInt, order: 1, ivalue: 0, mandatory: true, rolls: true),

@@ -10,6 +10,7 @@ import UIKit
 
 class ElemEditView: UIView {
     // Test for editing view
+    var element: Element!
     var nameLbl: UILabel!
     var valLbl: UILabel!
 
@@ -24,6 +25,13 @@ class ElemEditView: UIView {
         backgroundColor = UIColor.init(hexColor: "535A78")
         let viewHeightC = heightAnchor.constraint(equalToConstant: 180)
         viewHeightC.isActive = true
+
+        switch(element.type) {
+        case .derInt:
+            setupDerInt()
+        default:
+            debugPrint("ElemEditView: element type not known")
+        }
         
         nameLbl = UILabel()
         
@@ -57,5 +65,8 @@ class ElemEditView: UIView {
         
     }
     
+    func setupDerInt() {
+        
+    }
     
 }

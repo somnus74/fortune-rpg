@@ -22,9 +22,9 @@ class CharacterVC: UIViewController {
     @IBOutlet weak var selPicker: UIPickerView!
     @IBOutlet weak var inputViewBottomLayout: NSLayoutConstraint!
     @IBOutlet weak var rollBtnStack: UIStackView!
+    @IBOutlet weak var changeBtn: UIButton!
     
     var newEditView: UIView!
-    
     
     let otherPicker = UIPickerView()
     
@@ -54,6 +54,7 @@ class CharacterVC: UIViewController {
         ivalStepper.isEnabled = false
         selPicker.isHidden = true
         rollBtnStack.isHidden = true
+        changeBtn.isHidden = true
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
@@ -69,54 +70,54 @@ class CharacterVC: UIViewController {
     }
 
     func setupElemView(_ element: Element) {
-        if element.type == .freetext {
-            editingView.isHidden = true
-            newEditView = EquipEditView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-            view.addSubview(newEditView)
-            let editHeightC = newEditView.heightAnchor.constraint(equalToConstant: 180)
-            editHeightC.isActive = true
-            let editBotC = newEditView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -1.0 * (tabBarController?.tabBar.frame.size.height ?? 0))
-            editBotC.isActive = true
-            let editLeftC = newEditView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
-            editLeftC.isActive = true
-            let editRightC = newEditView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0)
-            editRightC.isActive = true
-            return
-        } else {
-            if newEditView != nil {
-                newEditView.isHidden = true
-            }
-            editingView.isHidden = false
-        }
+//        if element.type == .freetext {
+//            editingView.isHidden = true
+//            newEditView = ElemEditView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+//            view.addSubview(newEditView)
+//            let editHeightC = newEditView.heightAnchor.constraint(equalToConstant: 180)
+//            editHeightC.isActive = true
+//            let editBotC = newEditView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -1.0 * (tabBarController?.tabBar.frame.size.height ?? 0))
+//            editBotC.isActive = true
+//            let editLeftC = newEditView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
+//            editLeftC.isActive = true
+//            let editRightC = newEditView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0)
+//            editRightC.isActive = true
+//            return
+//        } else {
+//            if newEditView != nil {
+//                newEditView.isHidden = true
+//            }
+//            editingView.isHidden = false
+//        }
         
+        editingView.endEditing(true)
+        inputViewBottomLayout.constant = 0
+
         curElement = element
         nameLbl.isHidden = false
         nameLbl.text = element.name
-        nameLbl.sizeToFit()
+        //nameLbl.sizeToFit()
+        valLbl.isHidden = true
+        valTxt.isHidden = true
+        ivalTxt.isHidden = true
+        dvalLbl.isHidden = true
+        ivalStepper.isHidden = true
+        selPicker.isHidden = true
+        changeBtn.isHidden = true
 
         switch element.type {
         case .derInt:
             valLbl.isHidden = false
             valLbl.text = String(element.dvalue)
-            valLbl.sizeToFit()
-            valTxt.isHidden = true
-            ivalTxt.isHidden = true
-            dvalLbl.isHidden = true
-            ivalStepper.isHidden = true
+            //valLbl.sizeToFit()
         case .derText:
             valLbl.isHidden = false
             valLbl.text = element.value
             editingView.layoutSubviews()
             valLbl.sizeToFit()
-            valTxt.isHidden = true
-            ivalTxt.isHidden = true
-            dvalLbl.isHidden = true
-            ivalStepper.isHidden = true
         case .freeInt, .resInt:
-            valLbl.isHidden = true
-            valTxt.isHidden = true
-            ivalTxt.text = String(element.ivalue ?? 99)
             ivalTxt.isHidden = false
+            ivalTxt.text = String(element.ivalue ?? 99)
             if element.dvalue == nil {
                 dvalLbl.text = String("")
             } else {
@@ -128,19 +129,14 @@ class CharacterVC: UIViewController {
             ivalStepper.maximumValue = Double(System.instance.get_max(character, element: element))
             ivalStepper.value = Double(element.ivalue!)
         case .freetext:
-            valLbl.isHidden = true
             valTxt.isHidden = false
+            valTxt.isEnabled = true
             valTxt.text = element.value
-            ivalTxt.isHidden = true
-            dvalLbl.isHidden = true
-            ivalStepper.isHidden = true
         case .selText:
-            valLbl.isHidden = true
             valTxt.isHidden = false
+            valTxt.isEnabled = false
             valTxt.text = element.value
-            ivalTxt.isHidden = true
-            dvalLbl.isHidden = true
-            ivalStepper.isHidden = true
+            changeBtn.isHidden = false
         case .uninitialised:
             debugPrint("Uninitialised element in character")
         }
@@ -149,6 +145,19 @@ class CharacterVC: UIViewController {
         } else {
             rollBtnStack.isHidden = true
         }
+    }
+    
+    @IBAction func changeBtnPress(_ sender: Any) {
+        switch curElement.name {
+        case "Background":
+            let back_num = System.instance.backgrounds.firstIndex(of: curElement.value)
+            selPicker.selectRow(back_num!, inComponent: 0, animated: false)
+        default:
+            debugPrint("Unknown selText name: \(curElement.name)")
+        }
+        changeBtn.isHidden = true
+        selPicker.isHidden = false
+        selPicker.reloadAllComponents()
     }
     
     @IBAction func iStepperChanged(_ sender: Any) {

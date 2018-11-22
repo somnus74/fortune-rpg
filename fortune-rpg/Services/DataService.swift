@@ -28,6 +28,7 @@ class DataService {
     }
     
     func getUserData(forUID uid: String, handler: @escaping (_ userData: Dictionary<String, Any>) -> ()) {
+        // what is this function for??????
         REF_USERS.document(uid).getDocument { (document, error) in
             guard let userData = document?.data().map(String.init(describing:)) else { return }
             if let error = error {
