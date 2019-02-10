@@ -12,7 +12,6 @@ class Character {
     
     var documentId: String!
     var ownerId: String!
-    
     var elements = Dictionary<String, Dictionary<String, Element>>()
     var campaign: Campaign!
     var DP: Int = 0
@@ -80,6 +79,11 @@ class Character {
                         debugPrint("Conversion error in document: \(documentId), section: \(key), element: \(ekey)")
                         return
                     }
+                    switch elemdata["class"] {
+                    case "ElemFreeText": elements[key][ekey] = Element(data: elemdata)
+                    }
+                    
+                    
                     self.elements[key]![ekey] = Element(data: elemdata)
                     if ekey == "equipment" {
                         equip_num = max(equip_num, self.elements[key]![ekey]!.ivalue!)

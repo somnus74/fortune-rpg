@@ -513,7 +513,7 @@ class System {
 
 
 
-class Element {
+class ElementX {
     var type: ElemType
     var name: String
     var order: Int!
