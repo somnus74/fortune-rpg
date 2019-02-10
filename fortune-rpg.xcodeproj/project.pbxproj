@@ -13,7 +13,6 @@
 		D40F501821A267E900CB8FE7 /* ElemEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F501721A267E900CB8FE7 /* ElemEditView.swift */; };
 		D445D4DF217FEC770036DD5D /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445D4DE217FEC770036DD5D /* UITextFieldExt.swift */; };
 		D445D4E1218129590036DD5D /* MovingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D445D4E0218129590036DD5D /* MovingView.swift */; };
-		D492636621E8150E0048B651 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = D492636521E8150E0048B651 /* Element.swift */; };
 		D4A63CE4216375D500B8F5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A63CE3216375D500B8F5F4 /* AppDelegate.swift */; };
 		D4A63CE6216375D500B8F5F4 /* CharactersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A63CE5216375D500B8F5F4 /* CharactersVC.swift */; };
 		D4A63CE8216375D500B8F5F4 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A63CE7216375D500B8F5F4 /* UserInfoVC.swift */; };
@@ -44,7 +43,6 @@
 		D40F501721A267E900CB8FE7 /* ElemEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElemEditView.swift; sourceTree = "<group>"; };
 		D445D4DE217FEC770036DD5D /* UITextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
 		D445D4E0218129590036DD5D /* MovingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingView.swift; sourceTree = "<group>"; };
-		D492636521E8150E0048B651 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		D4A63CE0216375D500B8F5F4 /* fortune-rpg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fortune-rpg.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A63CE3216375D500B8F5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4A63CE5216375D500B8F5F4 /* CharactersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersVC.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				D400C29D2164FCBC008C5A6C /* Character.swift */,
 				D400C29F2164FDA3008C5A6C /* Campaign.swift */,
 				D4EDC84D21683CA100E0538E /* System.swift */,
-				D492636521E8150E0048B651 /* Element.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,7 +323,6 @@
 				D4A63CE4216375D500B8F5F4 /* AppDelegate.swift in Sources */,
 				D4B39CAA2163A773004EB37B /* CustomTextField.swift in Sources */,
 				D4EDC848216781DF00E0538E /* CharacterCell.swift in Sources */,
-				D492636621E8150E0048B651 /* Element.swift in Sources */,
 				D4B39CA8216399AF004EB37B /* AuthService.swift in Sources */,
 				D4B39CAF2163AF5F004EB37B /* UIViewExt.swift in Sources */,
 				D445D4DF217FEC770036DD5D /* UITextFieldExt.swift in Sources */,
